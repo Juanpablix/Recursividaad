@@ -1,0 +1,35 @@
+#def factorial(numero):
+    #if (numero == 0 or numero == 1):
+    #    return 1
+   # else:
+  #      return numero * factorial(numero - 1)
+
+
+#if __name__ == "__main__":
+ #   try:
+     #   num = int(input("De que número quieres saber el factorial? "))
+    #    if (num < 0):
+   #         print("El número debe ser mayor o igual a 0")
+  #      else:
+ #           print("El factorial de", num, "es", factorial(num))
+#
+ #   except:
+#        print("Se espera un número")      TEST
+
+a = [7, 5, 3, 1]
+print(a)
+
+def ordenarArreglo(Arreglo):
+        if (len(Arreglo) == 1):
+            return a[3], a[2], a[0], a[1]
+        else:
+            for x in range(len(Arreglo)):
+                if (Arreglo[0] > Arreglo[(x + 1)]):
+                    temp = Arreglo[1]
+                    Arreglo[1] = Arreglo[x]
+                    Arreglo[x] = temp
+                    return ordenarArreglo(Arreglo[1:])
+
+
+
+print(ordenarArreglo(a))
